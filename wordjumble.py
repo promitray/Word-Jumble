@@ -21,15 +21,15 @@ def jumbled_word(ans):
  return jumbled
 
 def thanks(player_name, score, words_number):
- print player_name, 'Your total score is', score, 'out of', words_number, '!!'
+ print (player_name, 'Your total score is', score, 'out of', words_number, '!!')
  print('Thank you for playing word jumble :-)')
 
 def main_game():
  print('Welcome to word Jumble!') 
  pname = raw_input('What is your name? ')
- print 'Hello',pname, ', thanks for playing word jumble!'
+ print ('Hello',pname, ', thanks for playing word jumble!')
  words_number = input('How many words would you like to guess? ')
- print 'You could either have words with equal number of letters at every turn or choose at every turn. We have 4, 5 and 6 lettered words.'
+ print ('You could either have words with equal number of letters at every turn or choose at every turn. We have 4, 5 and 6 lettered words.')
  choice = raw_input('Would you like to choose at every turn (Y) or choose once and have the same numbers of letters in all your words (N)? Please choose any option if you choose only one word. ')
  score = 0
  if choice != 'N' and choice != 'n' and choice != 'Y' and choice != 'y':
@@ -48,7 +48,7 @@ def main_game():
    jumbled = jumbled_word(picked_word)
    if jumbled == picked_word:
     jumbled = jumbled_word(picked_word)
-   print 'Jumbled word is', jumbled
+   print ('Jumbled word is', jumbled)
    guess = raw_input('what is on your mind? ')
    if guess == picked_word:
     print('Yes, that is correct! You get 1 point!! -:)')
@@ -85,7 +85,7 @@ def main_game():
    jumbled = jumbled_word(picked_word)
    if jumbled == picked_word:
     jumbled = jumbled_word(picked_word)
-   print 'Jumbled word is', jumbled
+   print ('Jumbled word is', jumbled)
    guess = raw_input('what is on your mind? ')
    if guess == picked_word:
     print('Yes, that is correct! You get 1 point!! -:)')
@@ -95,19 +95,19 @@ def main_game():
     response = raw_input('Would you like a hint? Y/N ')
     if response == 'Y' or response == 'y':
      if list_number == 4:  
-      print 'The word is',picked_word[0],'**',picked_word[-1]
+      print ('The word is',picked_word[0],'**',picked_word[-1])
      if list_number == 5:
-      print 'The word is',picked_word[0],'***',picked_word[-1]
+      print ('The word is',picked_word[0],'***',picked_word[-1])
      if list_number == 6:
-      print 'The word is',picked_word[0],'****',picked_word[-1] 
+      print ('The word is',picked_word[0],'****',picked_word[-1]) 
     if response == 'N' or response == 'n':
-     print 'That is brave of you! '
+     print ('That is brave of you! ')
     guess = raw_input('What is your second try? ')
     if guess == picked_word:
      print('Yes, that is correct! Second time lucky!') 
      score = score + 1
     else:
-     print 'Nope, sorry! The word is', picked_word
+     print ('Nope, sorry! The word is', picked_word)
 
   thanks(pname,score, words_number) 
  
